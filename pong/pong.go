@@ -68,10 +68,14 @@ func keyEvent() {
 			case termbox.KeyEsc:
 				return
 			case termbox.KeyArrowUp:
+				fallthrough
+			case termbox.KeyCtrlK:
 				if me_y > WALL_TOP+1 {
 					me_y--
 				}
 			case termbox.KeyArrowDown:
+				fallthrough
+			case termbox.KeyCtrlJ:
 				if me_y < WALL_BOTTOM-BAR {
 					me_y++
 				}
